@@ -1,17 +1,22 @@
 import './App.css';
+import { Routes,  Route } from "react-router-dom";
+
 import Navbar from "./Components/Navbar"
+import Header from "./Components/Header"
 import Footer from './Components/Footer'
 
-import vent1 from './Images/vent1.png'
+import Home from "./Pages/Home";
+import About from "./Pages/About";
 
 export default function App() {
   return (
     <div className="App">
       <Navbar />
-      <img src={vent1} alt="Header" />
-        <div className="Container">
-          
-        </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/About" element={<About />}/>
+      </Routes>
       <Footer />
     </div>
   )}
