@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* global variables */
+:root{
+  --blue-primary: #1f7ec2;
+  --blue-secondary: #35bdeb;
+  /* --pink-tertiary: #f51055;
+  --pink-dark: #700223; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: var(--blue-primary);
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  color: var(--blue-primary);
+}
+
+#navbar {
+  padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
 }
 
-.App-link {
-  color: #61dafb;
+#navbar h1 {
+  color: var(--blue-primary);
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#navbar #main_logo{
+  width: 100px;
+}
+
+#navbar #links {
+  margin-left: auto;
+}
+
+#navbar a{
+  color: #333;
+  margin-left: 16px;
+  padding: 6px;
+}
+
+#navbar a:hover {
+  color: var(--blue-secondary);
 }
