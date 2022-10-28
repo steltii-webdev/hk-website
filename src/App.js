@@ -4,14 +4,14 @@ import Footer from './Components/Footer'
 
 import vent1 from './Images/vent1.png'
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Navbar />
       <img src={vent1} alt="Header" />
+        <div className="Container">
+          
+        </div>
       <Footer />
     </div>
-  );
-}
-
-export default App;
+  )}
