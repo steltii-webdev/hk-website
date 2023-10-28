@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import hero_picture from '../Images/headervent1.png'
+import services from '../data/services.json'
 
 const Hero = () => {
     return ( 
@@ -10,15 +11,17 @@ const Hero = () => {
                         <div className="hero_list">
                             <h3>Työhön kuuluu:</h3>
                             <ul>
-                                <li>Ilmastointiasennustyöt</li>
-                                <li>Mittaus- ja säätötyöt</li>
-                                <li>IV-KVV-työnjohto</li>
-                                <li>Ilmastointihuollot</li>
-                                <li>Ilmastoinnin optimointi</li>
+                                {services.map((service, index) => (
+                                    <li key={index}>{service}</li>
+                                ))}
                             </ul>
                         </div>
                     <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                        <Link to="/contact"><button type="button" className="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Ota yhteyttä</button></Link>
+                        <Link to="/contact">
+                            <button type="button" className="btn btn-primary btn-lg px-4 me-md-2 fw-bold">
+                                Ota yhteyttä
+                            </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
